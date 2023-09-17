@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"  >
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,26 +7,47 @@
     <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-png">
     <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script type="module" src="./main.js" defer></script>
 </head>
 <body>
+ <div id="app">
     <button id="toggle-mode">
         <i class="ph ph-sun"></i>
         <i class="ph ph-moon"></i>
     </button>
 
-    <section>
-        <span id="minutes">60</span>
+    <section id="timer">
+        <span id="minutes"></span>
         <span id="colon">:</span>
-        <span id="seconds">59</span>
+        <span id="seconds"></span>
     </section>
-    <section>
-        <button> <i class="ph ph-play-circle"></i></button>
-        <button> <i class="ph ph-pause-circle"></i></button>
-        <button> <i class="ph ph-timer"></i></button>
-        <button> <i class="ph ph-stop-circle"></i></button>
-        <button> <i class="ph ph-speaker-none"></i></button>
-        <button> <i class="ph ph-speaker-high"></i></button>
+    <section id="controls">
+        <button 
+        data-action="toggleRunning"
+        class="ph ph-play-circle"> 
+        </button>
+        <button  
+        data-action="toggleRunning"
+        class="ph ph-pause-circle">
+        </button>
+        <button 
+        data-action="reset"
+        class="ph ph-stop-circle secondary">
+        </button>
+        <button 
+        data-action="set"
+        class="ph ph-timer secondary"> 
+        </button>
+        <button 
+        data-action="toggleMusic"
+        class="ph ph-speaker-none secondary" > 
+        </button>
+        <button 
+        data-action="toggleMusic"
+        class="ph ph-speaker-high"> 
+        </button>
     </section>
+ </div>
     
 </body>
 </html>
